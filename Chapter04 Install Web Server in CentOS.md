@@ -1,9 +1,9 @@
 # Install Apache Web Server on CentOS / RHEL
-## 1. Update your system
+## 1️⃣ Update your system
 ```
 sudo yum update -y
 ```
-## 2. Install Apache (httpd)
+## 2️⃣ Install Apache (httpd)
 ```
 sudo yum install httpd -y
 ```
@@ -11,7 +11,7 @@ Check installation:
 ```
 httpd -v
 ```
-## 3. Start and enable Apache
+## 3️⃣ Start and enable Apache
 Start the Apache service:
 ```
 sudo systemctl start httpd
@@ -24,7 +24,7 @@ Check status:
 ```
 sudo systemctl status httpd
 ```
-## 4. Configure Firewall (if firewall is running)
+## 4️⃣ Configure Firewall (if firewall is running)
 Allow HTTP (port 80):
 ```
 sudo firewall-cmd --permanent --add-service=http
@@ -37,7 +37,7 @@ Reload firewall:
 ```
 sudo firewall-cmd --reload
 ```
-## 5. Verify Apache is running
+## 5️⃣ Verify Apache is running
 ```
 http://localhost
 ```
@@ -50,7 +50,7 @@ To check port 80:
 ```
 sudo ss -tulnp | grep httpd
 ```
-## 6. Apache configuration files
+## 6️⃣ Apache configuration files
 Main configuration file:
 ```
 /etc/httpd/conf/httpd.conf
@@ -63,7 +63,7 @@ Document root (default website directory):
 ```
 /var/www/html/
 ```
-## 7. Create a simple test webpage
+## 7️⃣ Create a simple test webpage
 ```
 h1>Apache Web Server Running Successfully</h1>" | sudo tee /var/www/html/index.html
 ```
@@ -71,7 +71,7 @@ Restart Apache:
 ```
 sudo systemctl restart httpd
 ```
-## 8. Manage Apache service
+## 8️⃣ Manage Apache service
 Stop Apache:
 ```
 sudo systemctl stop httpd
@@ -84,7 +84,7 @@ Reload configuration without restarting:
 ```
 sudo systemctl reload httpd
 ```
-## 9. Enable SELinux rules (Only if SELinux is enforcing)
+## 9️⃣ Enable SELinux rules (Only if SELinux is enforcing)
 To allow Apache to read files outside default directory:
 ```
 sudo setsebool -P httpd_read_user_content 1
