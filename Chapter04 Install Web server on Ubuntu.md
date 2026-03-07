@@ -48,6 +48,7 @@ Add something like:
 <h1>Hello from your Ubuntu Web Server!</h1>
 ```
 Save and exit (Ctrl+O, Enter, Ctrl+X).
+
 4. Create a virtual host file
 ```
 sudo nano /etc/apache2/sites-available/example.com.conf
