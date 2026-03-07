@@ -1,4 +1,6 @@
 # How to configure Samba FTP on Ubuntu
+<img width="700" height="846" alt="image" src="https://github.com/user-attachments/assets/598c1fdf-e9dc-41fe-9dcf-299b79de24c3" />
+
 ## 1. Update your system
 ```
 sudo apt update
