@@ -28,7 +28,7 @@ Open your browser and go to:
 ```
 http://your_server_ip
 ```
-## Step 5: Configure a Website (Virtual Host)
+# Configure a Website (Virtual Host)
 1. Create a directory for your site
 Replace example.com with your domain.
 ```
@@ -48,11 +48,11 @@ Add something like:
 <h1>Hello from your Ubuntu Web Server!</h1>
 ```
 Save and exit (Ctrl+O, Enter, Ctrl+X).
-# Create a virtual host file
+4. Create a virtual host file
 ```
 sudo nano /etc/apache2/sites-available/example.com.conf
 ```
-## 1. Paste this:
+5. Paste this:
 ```
 <VirtualHost *:80>
     ServerName example.com
@@ -62,15 +62,15 @@ sudo nano /etc/apache2/sites-available/example.com.conf
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-## 2. Enable the site
+6. Enable the site
 ```
 sudo a2ensite example.com.conf
 ```
-1. Disable the default site (optional):
+7 Disable the default site (optional):
 ```
 sudo a2dissite 000-default.conf
 ```
-2. Reload Apache
+8 Reload Apache
 ```
 sudo systemctl reload apache2
 ```
