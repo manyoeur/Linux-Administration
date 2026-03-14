@@ -66,7 +66,7 @@ sudo smbpasswd -a admin
 ```
 Enable user to samba
 ```
-sud smpasswd -e admin
+sud smbpasswd -e admin
 ```
 Create a directory name admin
 ```
