@@ -42,7 +42,7 @@ Edit the Samba config file:
 ```
 sudo nano /etc/samba/smb.conf
 ```
-## Share annonymous
+## 5.1 Share annonymous
 
 ```
 [Public]
@@ -54,6 +54,43 @@ sudo nano /etc/samba/smb.conf
    force user = nobody
    force group = nogroup
    create mask = 0775
+```
+## 5.2 Share specific user
+Create user admin
+```
+sudo useradd admin
+```
+Add user to samba
+```
+sudo smbpasswd -a admin
+```
+Enable user to samba
+```
+sud smpasswd -e admin
+```
+Create a directory name sysadmin
+```
+sudo mkdir /srv/samba/sysadmin
+```
+Change ownership to user sysadmin
+```
+sudo chown -R root:sysadmin /srv/samba/sysadmin
+```
+Change permission
+```
+sudo chmod -R 775 /srv/samba/sysadmin
+```
+Edit samba configuration file
+```
+sudo nano /etc/samba/smb.conf
+```
+Add configure below to the end of the file
+```
+[Admin]
+    path = /srv/samba/admin
+    valid users = admin
+    writeable = yes
+    read only = no
 ```
 ##  6. Check Samba configuration
 ```
