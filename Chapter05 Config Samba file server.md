@@ -68,23 +68,23 @@ Enable user to samba
 ```
 sud smpasswd -e admin
 ```
-Create a directory name sysadmin
+Create a directory name admin
 ```
-sudo mkdir /srv/samba/sysadmin
+sudo mkdir /srv/samba/admin
 ```
-Change ownership to user sysadmin
+Change ownership to user admin
 ```
-sudo chown -R root:sysadmin /srv/samba/sysadmin
+sudo chown -R root:admin /srv/samba/admin
 ```
 Change permission
 ```
-sudo chmod -R 775 /srv/samba/sysadmin
+sudo chmod -R 775 /srv/samba/admin
 ```
-Edit samba configuration file
+Edit the Samba configuration file
 ```
 sudo nano /etc/samba/smb.conf
 ```
-Add configure below to the end of the file
+Add the configuration below to the end of the file
 ```
 [Admin]
     path = /srv/samba/admin
