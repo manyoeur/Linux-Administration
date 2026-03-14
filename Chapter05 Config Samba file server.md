@@ -97,6 +97,7 @@ Add the configuration below to the end of the file
 sudo testparm
 ```
 If you see “Loaded services file OK.” — you're good.
+
 To list samba user in system
 ```
 sudo pdbedit -L
