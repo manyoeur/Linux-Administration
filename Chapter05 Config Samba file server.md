@@ -42,25 +42,18 @@ Edit the Samba config file:
 ```
 sudo nano /etc/samba/smb.conf
 ```
-Add this at the bottom:
-```
+## Share annonymous
 
-[SharedFiles]
-   path = /srv/samba/shared
-   browseable = yes
-   read only = no
-   writable = yes
-   valid users = youruser
 ```
-If you want guest access (no password), use this instead:
-```
-
 [Public]
    path = /srv/samba/shared
    browseable = yes
    read only = no
+   writeable = yes
    guest ok = yes
    force user = nobody
+   force group = nogroup
+   create mask = 0775
 ```
 ##  6. Check Samba configuration
 ```
