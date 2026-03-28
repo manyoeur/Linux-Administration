@@ -114,11 +114,22 @@ sudo systemctl restart dovecot
 ### Test Dovecot IMAP Using Telnet (Port 143)
 Connect to IMAP
 ```
-telnet localhost 143
+telnet localhost pop3
 ```
 Expected output:
 ```
  OK [CAPABILITY IMAP4rev1 ...] Dovecot ready.
+## login user
+user dara
+
+# login passord
+pass 12345678
+
+# retrieve email
+retr 1
+
+# exit mail box command
+QUIT
 ```
 
 ## 4. Install Roundcube Webmail
