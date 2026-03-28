@@ -179,7 +179,7 @@ Copy the sample config:
 
 ```
 sudo cp /var/www/roundcube/config/config.inc.php.sample /var/www/roundcube/config/config.inc.php
-sudo vi /var/www/roundcube/config/config.inc.php
+sudo nano /var/www/roundcube/config/config.inc.php
 ```
 Set key values:
 ```
