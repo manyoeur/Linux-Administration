@@ -53,7 +53,6 @@ smtpd_sasl_type = dovecot
 smtpd_sasl_path = private/auth
 smtpd_sasl_auth_enable = yes
 smtpd_sasl_security_options = noanonymous
-```[3](https://www.server-world.info/en/note?os=CentOS_Stream_9&p=mail&f=1)
 ```
 Restart Postfix:
 
@@ -151,9 +150,7 @@ CREATE USER 'roundcube'@'localhost' IDENTIFIED BY 'your_secure_password';
 GRANT ALL PRIVILEGES ON roundcubemail.* TO 'roundcube'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
-```[5](https://oneuptime.com/blog/post/2026-03-04-roundcube-webmail-rhel-9-postfix-dovecot/view)
 ```
-
 ## **4.4 Download & Install Roundcube**
 
 ```
@@ -162,16 +159,10 @@ curl -LO https://github.com/roundcube/roundcubemail/releases/download/1.6.9/roun
 sudo tar xzf roundcubemail-1.6.9-complete.tar.gz
 sudo mv roundcubemail-1.6.9 /var/www/roundcube
 sudo chown -R apache:apache /var/www/roundcube
-```[5](https://oneuptime.com/blog/post/2026-03-04-roundcube-webmail-rhel-9-postfix-dovecot/view)
-
----
 ```
 ## **4.5 Initialize Roundcube Database**
 ```
 sudo mysql -u roundcube -p roundcubemail < /var/www/roundcube/SQL/mysql.initial.sql
-```[5](https://oneuptime.com/blog/post/2026-03-04-roundcube-webmail-rhel-9-postfix-dovecot/view)
-
----
 ```
 ## **4.6 Configure Roundcube**
 
