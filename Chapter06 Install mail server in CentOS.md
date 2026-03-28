@@ -112,6 +112,16 @@ Restart:
 ```
 sudo systemctl restart dovecot
 ```
+### Test Dovecot IMAP Using Telnet (Port 143)
+Connect to IMAP
+```
+telnet localhost 143
+```
+Expected output:
+```
+ OK [CAPABILITY IMAP4rev1 ...] Dovecot ready.
+```
+
 ## 4. Install Roundcube Webmail
 Source includes full Roundcube setup steps for RHEL/CentOS
 ### 4.1 Install Web & Database Dependencies
