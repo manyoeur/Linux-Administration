@@ -146,19 +146,17 @@ sudo mysql -u root -p
 ```
 SQL:
 ```
-
 CREATE DATABASE roundcubemail CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER 'roundcube'@'localhost' IDENTIFIED BY 'your_secure_password';
 GRANT ALL PRIVILEGES ON roundcubemail.* TO 'roundcube'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```[5](https://oneuptime.com/blog/post/2026-03-04-roundcube-webmail-rhel-9-postfix-dovecot/view)
-
----
+```
 
 ## **4.4 Download & Install Roundcube**
 
-```bash
+```
 cd /tmp
 curl -LO https://github.com/roundcube/roundcubemail/releases/download/1.6.9/roundcubemail-1.6.9-complete.tar.gz
 sudo tar xzf roundcubemail-1.6.9-complete.tar.gz
@@ -167,19 +165,19 @@ sudo chown -R apache:apache /var/www/roundcube
 ```[5](https://oneuptime.com/blog/post/2026-03-04-roundcube-webmail-rhel-9-postfix-dovecot/view)
 
 ---
-
+```
 ## **4.5 Initialize Roundcube Database**
-```bash
+```
 sudo mysql -u roundcube -p roundcubemail < /var/www/roundcube/SQL/mysql.initial.sql
 ```[5](https://oneuptime.com/blog/post/2026-03-04-roundcube-webmail-rhel-9-postfix-dovecot/view)
 
 ---
-
+```
 ## **4.6 Configure Roundcube**
 
 Copy the sample config:
 
-```bash
+```
 sudo cp /var/www/roundcube/config/config.inc.php.sample /var/www/roundcube/config/config.inc.php
 sudo vi /var/www/roundcube/config/config.inc.php
 ```
