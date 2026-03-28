@@ -54,10 +54,10 @@ smtpd_sasl_path = private/auth
 smtpd_sasl_auth_enable = yes
 smtpd_sasl_security_options = noanonymous
 ```[3](https://www.server-world.info/en/note?os=CentOS_Stream_9&p=mail&f=1)
-
+```
 Restart Postfix:
 
-```bash
+```
 sudo systemctl restart postfix
 ```
 ### 2.4 Test Sending Email from Postfix
