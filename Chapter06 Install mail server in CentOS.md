@@ -60,6 +60,26 @@ Restart Postfix:
 ```bash
 sudo systemctl restart postfix
 ```
+### 2.4 Test Sending Email from Postfix
+Install telnet
+```
+sudo dnf install telnet -y
+```
+Connect to Postfix
+```
+telnet localhost 25
+```
+Then issue SMTP commands:
+```
+EHLO localhost
+MAIL FROM:<test@example.com>
+RCPT TO:<you@example.com>
+DATA
+This is a manual SMTP test.
+.
+QUIT
+```
+
 ## 3. Install & Configure Dovecot (IMAP/POP3 Server)
 ### 3.1 Install Dovecot
 ```
