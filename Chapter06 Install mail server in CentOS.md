@@ -24,13 +24,12 @@ sudo systemctl start postfix
 sudo systemctl enable postfix
 ```[1](https://reintech.io/blog/install-configure-postfix-centos-9)
 ---
-
-### **2.2 Basic Postfix Configuration**
+```
+### 2.2 Basic Postfix Configuration
 
 Edit `/etc/postfix/main.cf`:
-
-```bash
-sudo vi /etc/postfix/main.cf
+```
+sudo nano /etc/postfix/main.cf
 ```
 Common required changes (example from Server World):
 ```
